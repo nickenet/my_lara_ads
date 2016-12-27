@@ -89,53 +89,53 @@ $tab = [
     config('backpack.base.route_prefix', 'admin')
 ];
 // Don't check the purchase code for these areas (install, admin, etc. )
-if (!in_array(\Illuminate\Support\Facades\Request::segment(1), $tab))
-{
-    // Get purchase code from Admin panel
-    $apPurchaseCode = null;
-    if (empty($apPurchaseCode)) {
-        try {
-            $settingsData = \Larapen\Settings\app\Models\Setting::where('key', 'purchase_code')->first();
-            if (!empty($settingsData)) {
-                $apPurchaseCode = $settingsData->value;
-            }
-        } catch (\Exception $e) {
-            $settingsData = null;
-        }
-    }
-
-    // Make the purchase code verification only if 'installed' file exists
-    if (file_exists(storage_path('installed')))
-    {
-        // Get purchase code from 'installed' file
-        $purchase_code = file_get_contents(storage_path('installed'));
-
-        // Send the purchase code checking
-        if (
-            $purchase_code == '' or
-            $apPurchaseCode == '' or
-            $purchase_code != $apPurchaseCode)
-        {
-            try {
-                $apiUrl = config('larapen.core.purchase_code_checker_url') . $apPurchaseCode;
-                $data = file_get_contents($apiUrl);
-            } catch (\Exception $e) {
-                $data = json_encode(['valid' => false, 'message' => 'Invalid purchase code.']);
-            }
-
-            // Format object data
-            $data = json_decode($data);
-
-            // Checking
-            if ($data->valid == true) {
-                file_put_contents(storage_path('installed'), $data->license_code);
-            } else {
-                // Invalid purchase code
-				flash()->error($data->message);
-            }
-        }
-    }
-}
+//if (!in_array(\Illuminate\Support\Facades\Request::segment(1), $tab))
+//{
+//    // Get purchase code from Admin panel
+//    $apPurchaseCode = null;
+//    if (empty($apPurchaseCode)) {
+//        try {
+//            $settingsData = \Larapen\Settings\app\Models\Setting::where('key', 'purchase_code')->first();
+//            if (!empty($settingsData)) {
+//                $apPurchaseCode = $settingsData->value;
+//            }
+//        } catch (\Exception $e) {
+//            $settingsData = null;
+//        }
+//    }
+//
+//    // Make the purchase code verification only if 'installed' file exists
+//    if (file_exists(storage_path('installed')))
+//    {
+//        // Get purchase code from 'installed' file
+//        $purchase_code = file_get_contents(storage_path('installed'));
+//
+//        // Send the purchase code checking
+//        if (
+//            $purchase_code == '' or
+//            $apPurchaseCode == '' or
+//            $purchase_code != $apPurchaseCode)
+//        {
+//            try {
+//                $apiUrl = config('larapen.core.purchase_code_checker_url') . $apPurchaseCode;
+//                $data = file_get_contents($apiUrl);
+//            } catch (\Exception $e) {
+//                $data = json_encode(['valid' => false, 'message' => 'Invalid purchase code.']);
+//            }
+//
+//            // Format object data
+//            $data = json_decode($data);
+//
+//            // Checking
+//            if ($data->valid == true) {
+//                file_put_contents(storage_path('installed'), $data->license_code);
+//            } else {
+//                // Invalid purchase code
+//				flash()->error($data->message);
+//            }
+//        }
+//    }
+//}
 
 
 /*

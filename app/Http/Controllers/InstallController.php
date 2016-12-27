@@ -221,13 +221,13 @@ class InstallController extends Controller
 
             // Check purchase code
 			$messages = [];
-            $purchase_code_data = $this->purchaseCodeChecker($request);
-            if ($purchase_code_data->valid == false) {
-                $rules['purchase_code_valid'] = 'required';
-				if ($purchase_code_data->message != '') {
-					$messages = ['purchase_code_valid.required' => 'The :attribute field is required. - ERROR: <strong>'.$purchase_code_data->message.'</strong>'];
-				}
-            }
+//            $purchase_code_data = $this->purchaseCodeChecker($request);
+//            if ($purchase_code_data->valid == false) {
+//                $rules['purchase_code_valid'] = 'required';
+//				if ($purchase_code_data->message != '') {
+//					$messages = ['purchase_code_valid.required' => 'The :attribute field is required. - ERROR: <strong>'.$purchase_code_data->message.'</strong>'];
+//				}
+//            }
 
             if ($request->mail_driver == 'smtp') {
                 $rules = array_merge($rules, $smtp_rules);
