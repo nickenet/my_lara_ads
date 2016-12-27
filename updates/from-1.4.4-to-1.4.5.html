@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Guide</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/highlight/styles/default.css">
+    <script src="assets/highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+<body><div class="container"><h2 id="update-guide">Update Guide</h2>
+
+<p>Release <code>1.4.5</code></p>
+
+<h2 id="whats-new">What’s New</h2>
+
+<ul>
+    <li>Switching between languages on search page (fixed)</li>
+    <li>Notification message of ads expiration (fixed)</li>
+</ul>
+
+<h2 id="how-to-update">How to Update</h2>
+
+<ul>
+    <li>Login to your FTP account</li>
+    <li>Replace these folders</li>
+</ul>
+<pre><code>resources/lang/en
+resources/lang/es
+resources/lang/fr</code></pre>
+
+    <ul>
+        <li>Replace these files</li>
+    </ul>
+<pre><code>app/Http/Controllers/Ad/DetailsController.php
+config/app.php
+readme.md
+resources/views/classified/layouts/inc/header.blade.php</code></pre>
+<ul>
+    <li>You are done.</li>
+</ul>
+</div>
+</body>
+</html>

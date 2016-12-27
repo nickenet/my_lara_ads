@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Guide</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/highlight/styles/default.css">
+    <script src="assets/highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+<body>
+<div class="container"><h2 id="update-guide">Update Guide</h2>
+
+<p>Release <code>1.6.0</code></p>
+
+<h2 id="whats-new">What’s New</h2>
+
+<ul>
+    <li>Admin panel : AJAX table view with big data sets added - was still selecting all rows from the DB</li>
+    <li>Allow to add, update, or delete locations (cities, administrative divisions such as regions or provinces) from the admin panel</li>
+    <li>Allow renaming the URL address of the admin panel against access attempts (example: http://domain.tld/admin123 instead of http://domain.tld/admin)</li>
+    <li>And many more small improvements</li>
+</ul>
+
+<h2 id="how-to-update">How to Update</h2>
+
+    <ul>
+        <li>Login to your FTP account</li>
+        <li>Replace all LaraClassified files (except the "public/uploads" folder).</li>
+        <li>
+            Or...
+            <ul>
+                <li>Replace these folders</li>
+                <pre><code>app/Http/Controllers/Admin
+app/Http/Controllers/Ajax
+app/Http/Middleware
+app/Http/Requests/Admin
+app/Larapen
+config/backpack
+config/prologue
+database/seeds
+database/sql
+packages
+public/assets/js/app
+public/packages
+public/vendor
+resources/config
+resources/lang/en
+resources/lang/fr
+resources/lang/vendor
+resources/views/vendor
+vendor</code></pre>
+                <li>Replace these files</li>
+                <pre><code>app/Http/Controllers/Ad/PostController.php
+app/Http/routes.php
+composer.json
+composer.lock
+config/app.php
+readme.md</code></pre>
+            </ul>
+        </li>
+        <li>Open <code>app/Http/routes.php</code> file</li>
+        <li>Place this code in it</li>
+    </ul>
+    <pre><code class="php">Route::get('update', function () {
+	\DB::table('settings')->where('field', '=', '')->update(array('field' => '{"name":"value","label":"Value","type":"text"}'));
+	\DB::table('settings')->where('key', '=', 'ads_pictures_number')->update(array('lft' => '14', 'rgt' => '15', 'depth' => '1'));
+	\DB::table('settings')->where('key', '=', 'custom_css')->update(array('lft' => '124', 'rgt' => '125', 'depth' => '1'));
+	\DB::table('settings')->where('key', '=', 'show_ad_on_googlemap')->update(array('lft' => '22', 'rgt' => '23', 'depth' => '1'));
+
+	return 'Success';
+});</code></pre>
+    <ul>
+        <li>Visit <code>yoursite.com/update</code> to migrate your website</li>
+        <li>Remove the code after update.</li>
+        <li>You are done.</li>
+    </ul>
+</div>
+</body>
+</html>

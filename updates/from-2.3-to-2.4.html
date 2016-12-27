@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Guide</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/highlight/styles/default.css">
+    <script src="assets/highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+<body>
+<div class="container"><h2 id="update-guide">Update Guide</h2>
+
+<p>Release <code>2.4</code></p>
+
+<h2 id="whats-new">What’s New</h2>
+
+<ul>
+    <li>Added: Country locations databases installation feature (from the admin panel)</li>
+    <li>Added: Simplified activation of ads and users by an ajax call (from the admin panel)</li>
+    <li>Added: Mini stats on the admin panel dashboard</li>
+    <li>Improved: HTTPS protocol usage</li>
+    <li>Fixed: Show the ads images when sharing them on Facebook <br>(Please use this tool <a href="https://developers.facebook.com/tools/debug/" target="_blank">Sharing Debugger</a> to "Scrape Again" your old links having this issue)</li>
+    <li>Fixed: Timezone, Loc.admin1 & Loc.admin2 edit form (from the admin panel)</li>
+    <li>Fixed: Find the most populated city in region (state) or in country</li>
+    <li>Fixed: Distance between cities on search page</li>
+    <li>Fixed: Carousel ads list for review activation</li>
+    <li>Fixed: Guests can post Ads</li>
+    <li>Fixed: XML sitemaps generation</li>
+    <li>And many more small improvements</li>
+</ul>
+
+<h2 id="how-to-update">How to Update</h2>
+
+    <ul>
+        <li>Login to your FTP account</li>
+        <li>Replace all LaraClassified files (except the "public/uploads" folder).</li>
+        <li>
+            Or...
+            <ul>
+                <li>Replace (or add) these folders (Delete old folders and add the new)</li>
+                <pre><code>app
+config/larapen
+packages
+resources/lang
+resources/views/errors/layouts
+resources/views/layouts
+resources/views/search
+resources/views/vendor
+routes
+storage/database
+vendor/composer</code></pre>
+                <li>Replace (or add) these files</li>
+                <pre><code>composer.json
+config/app.php
+config/database.php
+config/laravel-backup.php</code></pre>
+            </ul>
+        </li>
+        <li>Open <code>routes/web.php</code> file</li>
+        <li>Place this code in it (Before all other command lines)</li>
+    </ul>
+    <pre><code class="php">Route::get('update', function () {
+	$updateSqlFile = storage_path('database/updates/from-2.3-to-2.4/update.sql');
+    if (file_exists($updateSqlFile)) {
+        $sql = file_get_contents($updateSqlFile);
+        $sql = str_replace('&lt;&lt;prefix&gt;&gt;', \DB::getTablePrefix(), $sql);
+        \DB::unprepared($sql);
+    }
+
+	return 'Success';
+});</code></pre>
+    <ul>
+        <li>Visit <code>yoursite.com/update</code> to migrate your website</li>
+        <li>Remove the code after update.</li>
+    </ul>
+    <ul>
+        <li>You are done.</li>
+    </ul>
+</div>
+</body>
+</html>

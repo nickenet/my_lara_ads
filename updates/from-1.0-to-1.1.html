@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Guide</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/highlight/styles/default.css">
+    <script src="assets/highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+<body><div class="container"><h2 id="update-guide">Update Guide</h2>
+
+<p>Release <code>1.1</code></p>
+
+<h2 id="whats-new">What’s New</h2>
+
+<ul>
+    <li>Known issue are fixed</li>
+    <li>[ New ] Most of settings of the /.env file have been moved in the admin panel</li>
+    <li>[ New ] Setting to turn ON/OFF the SVG map of the countries on the homepage added</li>
+    <li>[ New ] Admin panel setting for increased number of photos per ad added (min: 1, max: 20)</li>
+    <li>[ New ] Admin panel setting for CSS customization added</li>
+    <li>[ New ] Google maps for the ad page (only based on Ad's city for now) added</li>
+</ul>
+
+<h2 id="how-to-update">How to Update</h2>
+
+<ul>
+    <li>Login to your FTP account</li>
+    <li>Replace these folders</li>
+</ul>
+<pre><code>app
+config
+database
+packages
+public/assets
+public/images
+public/packages
+public/vendor
+resources/lang/en
+resources/lang/es
+resources/lang/fr
+resources/views
+vendor</code></pre>
+
+<ul>
+    <li>Replace these files</li>
+</ul>
+<pre><code>.env.example
+artisan
+composer.json
+package.json
+readme.md
+server.php</code></pre>
+
+<ul>
+<li>Delete <code>boostrap/cache/routes.php</code> file ( If exists )</li>
+    <li>Delete all files (if exists) in the folders:
+        <ul>
+            <li><code>storage/framework/cache/*</code></li>
+            <li><code>storage/framework/sessions/*</code></li>
+            <li><code>storage/framework/views/*</code></li>
+            <li><code>storage/logs/*</code></li>
+        </ul>
+    </li>
+<li>Open <code>app/Http/routes.php</code> file</li>
+<li>Place this code in it</li>
+</ul>
+<pre><code class="php">Route::get('update', function () {
+    Schema::table('ads', function ($table) {
+        $table->string('address', 255)->nullable()->index('address')->after('seller_phone_hidden');
+    });
+    $updateSqlFile = database_path('sql/data/updates/from-1.0-to-1.1/update.sql');
+    if (file_exists($updateSqlFile)) {
+        \DB::unprepared(file_get_contents($updateSqlFile));
+    }
+    return 'Success';
+});</code></pre>
+
+<ul>
+    <li>BE CAREFUL: Before you the next step, don't forget to backup your database. <br>
+        After this operation, your website configuration will be reset, but your users's data will be saved.</li>
+    <li>Visit <code>yoursite.com/update</code> to migrate your website</li>
+    <li>You are done.</li>
+    <li>Remove the code after update.</li>
+</ul>
+</div>
+</body>
+</html>

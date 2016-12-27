@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Guide</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/highlight/styles/default.css">
+    <script src="assets/highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+<body><div class="container"><h2 id="update-guide">Update Guide</h2>
+
+<p>Release <code>1.4.2</code></p>
+
+<h2 id="whats-new">What’s New</h2>
+
+<ul>
+    <li>Issue of adding User from the admin panel fixed</li>
+    <li>Minor improvements</li>
+</ul>
+
+<h2 id="how-to-update">How to Update</h2>
+
+<ul>
+    <li>Login to your FTP account</li>
+    <li>Replace these folders</li>
+</ul>
+<pre><code>database/sql/data/geonames
+resources/views/classified/ad/details
+resources/views/classified/layouts
+resources/views/errors/layouts</code></pre>
+
+<ul>
+    <li>Replace these files</li>
+</ul>
+<pre><code>app/Larapen/Models/User.php
+app/Http/Controllers/Account/AdsController.php
+config/app.php
+public/.htaccess
+public/robots.https.txt (new)
+.env.example
+readme.md</code></pre>
+
+<ul>
+    <li>You are done.</li>
+</ul>
+</div>
+</body>
+</html>
