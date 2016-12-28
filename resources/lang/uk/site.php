@@ -1,5 +1,5 @@
 <?php
 
 return array(
-    'admin_panel' => 'Admin Panel',
+    'admin_panel' => 'Панель адміністратора',
 );

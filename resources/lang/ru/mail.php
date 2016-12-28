@@ -47,8 +47,8 @@ return [
     'Reset Your Password' => 'Reset Your Password',
     'Forgot your password? Let\'s get you a new one.' => 'Forgot your password? Let\'s get you a new one.',
     
-    'New message from :app_name' => 'New message from :app_name',
-    ':app_name - New message' => ':app_name - New message',
+    'New message from :app_name' => 'Nuevo mensaje de :app_name',
+    ':app_name - New message' => ':app_name - Nuevo mensaje',
 
 
 ];
