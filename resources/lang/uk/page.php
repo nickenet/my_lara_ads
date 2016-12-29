@@ -27,11 +27,11 @@ return [
     'Sitemap' => 'Sitemap',
     'Phishing' => 'Phishing',
     
-    'Terms' => 'Terms Of Use',
-    'Terms Of Use' => 'Terms Of Use',
-    'Definitions' => 'Definitions',
-    'definition_content' => '<p>Each of the terms mentioned below have in these Conditions of Sale :app_name Service (hereinafter the "Conditions") the following meanings:</p>
-<p><strong>Announcement</strong> : refers to all the elements and data (visual, textual, sound, photographs, drawings), presented by an Advertiser editorial under his sole responsibility, in order to buy, rent or sell a product or service and broadcast on the Website and Mobile Site.</p>
+    'Terms' => 'Умови користування',
+    'Terms Of Use' => 'Умови користування',
+    'Definitions' => 'Визначення',
+    'definition_content' => '<p>Кожен з термінів, згаданих нижче, в цих умовах продажу :app_name (далі "Умови") мають наступне значення:</p>
+<p><strong>Оголошення</strong> : відноситься до всіх елементів і даних (візуальні, текстові, звукові файли, фотографії, малюнки), представлені рекламодавцем виключно під його власну відповідальність, щоб купити, орендувати або продати товар або послугу, і транслюється на веб-сайті та мобільному пристрої.</p>
 <p><strong>Advertiser</strong> : means any natural or legal person, a major, established in France, holds an account and having submitted an announcement, from it, on the Website. Any Advertiser must be connected to the Personal Account for deposit and or manage its ads. Ad first deposit automatically entails the establishment of a Personal Account to the Advertiser.</p>
 <p><strong>Personal Account</strong> : refers to the free space than any Advertiser must create and which it should connect from the Website to disseminate, manage and view its ads.</p>
 <p><strong>:app_name</strong> : means the company that publishes and operates the Website and Mobile Site {YourCompany}, registered at the Trade and Companies Register of Cotonou under the number {YourCompany Registration Number} whose registered office is at {YourCompany Address}.</p>
