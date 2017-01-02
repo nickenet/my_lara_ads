@@ -69,8 +69,8 @@ return [
     'Login for faster access to the best deals. Click here if you don\'t have an account.' => '<a href=":login_url"><strong>Login</strong></a> for faster access to the best deals. <a href=":register_url"><strong>Click here</strong></a> if you don\'t have an account.',
     'List of Categories and Sub-categories' => 'Список категорій та підкатегорій',
     'List of Cities in' => 'Список міст',
-    'Do you get anything for sell ?' => 'Ви отримуєте щось для продажу або оренди ?',
-    'Sell your products and services online FOR FREE. It\'s easier than you think !' => 'Продавати свої товари і послуги онлайн безкоштовно. Це простіше, ніж ви думаєте!',
+    'Do you get anything for sell ?' => 'Ви маєте щось для продажу або оренди ?',
+    'Sell your products and services online FOR FREE. It\'s easier than you think !' => 'Продавати товари і послуги онлайн безкоштовно. Це простіше, ніж ви думаєте!',
     
     'footer_note' => '<strong>Sell</strong>, <strong>Пропозиція</strong>, <strong>Оренда</strong>, <strong>Угода</strong>, <strong>Пошук</strong>, <strong>	
 Купувати</strong> товарів та послуг в <strong>:country</strong>. Це 100% безкоштовно!',
