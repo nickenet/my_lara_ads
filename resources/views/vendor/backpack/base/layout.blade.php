@@ -87,7 +87,7 @@
       <!-- /.content-wrapper -->
 
       <footer class="main-footer">
-        @if (config('settings.show_powered_by'))
+        @if (!config('settings.show_powered_by'))
             <div class="pull-right hidden-xs">
                 {{ trans('backpack::base.powered_by') }} <a target="_blank" href="http://www.bedigit.com">Bedigit</a>.
             </div>

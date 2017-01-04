@@ -22,7 +22,7 @@
 				<a href="{{ config('settings.facebook_page_url') }}" target="_blank"><i class="icon-facebook-rect"></i></a><a
 						href="{{ config('settings.twitter_url') }}" target="_blank"><i class="icon-twitter-bird"></i></a>
 			</li>
-			@if (config('settings.show_powered_by'))
+			@if (!config('settings.show_powered_by'))
 			<li>
 				<a href="http://www.bedigit.com">Powered by Bedigit</a>
 			</li>
