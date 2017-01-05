@@ -2,18 +2,18 @@
 
 namespace Backpack\CRUD\app\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Support\Facades\Form as Form;
+use Backpack\CRUD\CrudPanel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Form as Form;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Backpack\CRUD\app\Http\Controllers\CrudFeatures\Reorder;
+use Backpack\CRUD\app\Http\Controllers\CrudFeatures\AjaxTable;
+// CRUD Traits for non-core features
+use Backpack\CRUD\app\Http\Controllers\CrudFeatures\Revisions;
 use Backpack\CRUD\app\Http\Requests\CrudRequest as StoreRequest;
 use Backpack\CRUD\app\Http\Requests\CrudRequest as UpdateRequest;
-use Backpack\CRUD\CrudPanel;
-// CRUD Traits for non-core features
-use Backpack\CRUD\app\Http\Controllers\CrudFeatures\AjaxTable;
-use Backpack\CRUD\app\Http\Controllers\CrudFeatures\Reorder;
-use Backpack\CRUD\app\Http\Controllers\CrudFeatures\Revisions;
 use Backpack\CRUD\app\Http\Controllers\CrudFeatures\ShowDetailsRow;
 
 class CrudController extends BaseController
@@ -114,6 +114,7 @@ class CrudController extends BaseController
 
         // insert item in the db
         $item = $this->crud->create($request->except(['redirect_after_save', '_token']));
+        $this->data['entry'] = $this->crud->entry = $item;
 
         // show a success message
         \Alert::success(trans('backpack::crud.insert_success'))->flash();
@@ -175,8 +176,9 @@ class CrudController extends BaseController
         }
 
         // update the row in the db
-        $this->crud->update($request->get($this->crud->model->getKeyName()),
+        $item = $this->crud->update($request->get($this->crud->model->getKeyName()),
                             $request->except('redirect_after_save', '_token'));
+        $this->data['entry'] = $this->crud->entry = $item;
 
         // show a success message
         \Alert::success(trans('backpack::crud.update_success'))->flash();

@@ -20,6 +20,51 @@ All Notable changes to `Backpack CRUD` will be documented in this file
 - Nothing
 
 
+## [3.1.48] - 2016-12-14
+
+### Fixed
+- Prevent double-json-encoding on complicated field types, when using attribute casting; Fixes #259;
+
+
+## [3.1.47] - 2016-12-14
+
+### Fixed
+- Don't mutate date/datetime if they are empty. It will default to now;
+- select_from_array has a new option: "allows_multiple";
+- syncPivot is now done before saving the main entity in Update::edit();
+- added beforeColumn(), afterColumn(), beforeField() and afterField() methods to more easily reorder fields and columns - big up to [Ben Sutter](https://github.com/b8ne) for this feature;
+
+
+## [3.1.46] - 2016-12-13
+
+### Fixed
+- a filter will be triggered if the variable exists, wether it's null or not;
+- if the elfinder route has not been registered, it will be by the CrudServiceProvider;
+
+
+## [3.1.45] - 2016-12-02
+
+### Added
+- $this->crud->with() method, which allows you to easily eager load relationships;
+- auto eager loading relationships that are used in the CRUD columns;
+
+### Fixed
+- select and select_multiple columns use a considerably lower number of database queries;
+
+
+## [3.1.44] - 2016-12-02
+
+### Added
+- Better ability to interact with the entity that was just saved, in EntityCrudController::create() and update() [the $this->crud->entry and $this->data['entry'] variables];
+
+
+## [3.1.43] - 2016-11-29
+
+### Fixed
+- Allow mixed simple and complex column definitions (thanks [JamesGuthrie](https://github.com/JamesGuthrie));
+- disable default DataTable ordering;
+
+
 ## [3.1.42] - 2016-11-13
 
 ### Fixed

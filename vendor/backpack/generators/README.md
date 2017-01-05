@@ -10,7 +10,8 @@
 
 Quickly generate Backpack templated Models, Requests, Views and Config files.
 
-**[Subscribe to the newsletter](http://eepurl.com/bUEGjf) to be notified of major updates or breaking changes.** 
+> ### Security updates and breaking changes
+> Please **[subscribe to the Backpack Newsletter](http://eepurl.com/bUEGjf)** so you can find out about any security updates, breaking changes or major features. We send an email every 1-2 months.
 
 ## Install
 

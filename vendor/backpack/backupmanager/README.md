@@ -10,8 +10,9 @@
 
 An admin interface for managing backups (download and delete). Used in the Backpack package, on Laravel 5.2+
 
-**Subscribe to the [Mailchimp list](http://eepurl.com/bUEGjf) to be up to date with the community.**
 
+> ### Security updates and breaking changes
+> Please **[subscribe to the Backpack Newsletter](http://eepurl.com/bUEGjf)** so you can find out about any security updates, breaking changes or major features. We send an email every 1-2 months.
 ![Backpack\BackupManager screenshot](https://infinit.io/_/cU2PtmD.png)
 
 
@@ -116,6 +117,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 If you discover any security related issues, please email hello@tabacitu.ro instead of using the issue tracker.
 
+Please **[subscribe to the Backpack Newsletter](http://eepurl.com/bUEGjf)** so you can find out about any security updates, breaking changes or major features. We send an email every 1-2 months.
+
 ## Credits
 
 - [Cristian Tabacitu](https://github.com/tabacitu)
@@ -123,4 +126,4 @@ If you discover any security related issues, please email hello@tabacitu.ro inst
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Backpack is free for non-commercial use and $19/project for commercial use. Please see [License File](LICENSE.md) and [backpackforlaravel.com](https://backpackforlaravel.com/#pricing) for more information.

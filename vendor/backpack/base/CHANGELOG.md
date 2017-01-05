@@ -22,6 +22,38 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Nothing
 
 
+## [0.7.11] - 2016-12-21
+
+### Fixed
+- only load the generators if the classes exist;
+
+
+## [0.7.10] - 2016-12-21
+
+### Added
+- laracasts/generators require-dev dependency;
+
+
+## [0.7.9] - 2016-12-21
+
+### Added
+- backpack/generators require-dev dependency;
+
+
+## [0.7.8] - 2016-12-13
+
+### Added
+- Greek translation file, thanks to [Stamatis Katsaounis](https://github.com/skatsaounis);
+- German translation file, thanks to [Thomas aka tricki](https://github.com/tricki);
+
+
+## [0.7.7] - 2016-12-02
+
+### Fixed
+- new version of font awesome;
+
+
+
 ## [0.7.6] - 2016-11-06
 
 ### Fixed

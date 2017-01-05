@@ -10,7 +10,8 @@
 
 An interface for the administrator to easily change application settings. Uses Laravel Backpack. On Laravel 5.2.
 
-**Subscribe to the [Backpack Newsletter](http://eepurl.com/bUEGjf) to be announced of any breaking changes or major updates (frequency: monthly or less).**
+> ### Security updates and breaking changes
+> Please **[subscribe to the Backpack Newsletter](http://eepurl.com/bUEGjf)** so you can find out about any security updates, breaking changes or major features. We send an email every 1-2 months.
 
 ## Install
 
@@ -58,12 +59,12 @@ Settings are stored in the database in the "settings" table. Its columns are:
 - name (ex: Contact form email address)
 - description (ex: The email address that all emails go to.)
 - value (ex: admin@laravelbackpack.com)
-- field (Backpack CRUD field configuration in JSON format. http://laravelbackpack.com/docs)
+- field (Backpack CRUD field configuration in JSON format. https://laravel-backpack.readme.io/docs/crud-fields#standard-field-types)
 - active (1 or 0)
 - created_at
 - updated_at
 
-There is no interface available to add new settings. They are added by the developer directly in the database, since the Backpack CRUD field configuration is a bit complicated. See the field types and their configuration code on http://laravelbackpack.com/docs
+There is no interface available to add new settings. They are added by the developer directly in the database, since the Backpack CRUD field configuration is a bit complicated. See the field types and their configuration code on https://laravel-backpack.readme.io/docs
 
 ## Screenshots
 
@@ -94,6 +95,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 If you discover any security related issues, please email hello@tabacitu.ro instead of using the issue tracker.
 
+Please **[subscribe to the Backpack Newsletter](http://eepurl.com/bUEGjf)** so you can find out about any security updates, breaking changes or major features. We send an email every 1-2 months.
+
 ## Credits
 
 - [Cristian Tabacitu][link-author]
@@ -101,7 +104,7 @@ If you discover any security related issues, please email hello@tabacitu.ro inst
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Backpack is free for non-commercial use and $19/project for commercial use. Please see [License File](LICENSE.md) and [backpackforlaravel.com](https://backpackforlaravel.com/#pricing) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/backpack/settings.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
