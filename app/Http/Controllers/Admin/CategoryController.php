@@ -70,6 +70,7 @@ class CategoryController extends CrudController
 				'label' => 'Parent',
 				'type' => 'select_from_array',
 				'options' => $this->categories(),
+                                'value' =>'',
 				'allows_null' => false,
 			]);
 		}
