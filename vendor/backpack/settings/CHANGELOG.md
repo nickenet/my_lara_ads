@@ -20,6 +20,12 @@ All Notable changes to `Backpack Settings` will be documented in this file
 - Nothing
 
 
+## 2.0.13 - 2017-01-08
+
+### Added
+- Lang files for the Settings package, thanks to [Phouvanh Korngchansavath](https://www.phouvanh.com/);
+
+
 
 ## 2.0.12 - 2016-12-13
 

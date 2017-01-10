@@ -14,18 +14,31 @@ class SettingCrudController extends CrudController
         parent::__construct();
 
         $this->crud->setModel("Backpack\Settings\app\Models\Setting");
-        $this->crud->setEntityNameStrings('setting', 'settings');
+        $this->crud->setEntityNameStrings(trans('backpack::settings.setting_singular'), trans('backpack::settings.setting_plural'));
         $this->crud->setRoute(config('backpack.base.route_prefix', 'admin').'/setting');
         $this->crud->denyAccess(['create', 'delete']);
-        $this->crud->setColumns(['name', 'value', 'description']);
+        $this->crud->setColumns([
+            [
+                'name'  => 'name',
+                'label' => trans('backpack::settings.name'),
+            ],
+            [
+                'name'  => 'value',
+                'label' => trans('backpack::settings.value'),
+            ],
+            [
+                'name'  => 'description',
+                'label' => trans('backpack::settings.description'),
+            ],
+        ]);
         $this->crud->addField([
-                                'name'       => 'name',
-                                'label'      => 'Name',
-                                'type'       => 'text',
-                                'attributes' => [
-                                    'disabled' => 'disabled',
-                                    ],
-                            ]);
+            'name'       => 'name',
+            'label'      => trans('backpack::settings.name'),
+            'type'       => 'text',
+            'attributes' => [
+                'disabled' => 'disabled',
+            ],
+        ]);
     }
 
     /**

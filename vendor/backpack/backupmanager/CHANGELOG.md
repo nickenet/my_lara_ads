@@ -20,6 +20,13 @@ All Notable changes to `backupmanager` will be documented in this file
 - Nothing
 
 
+## [1.1.14] - 2017-01-08
+
+### Fixed
+- removed duplicate namespace in BackupController;
+
+
+
 ## [1.1.13] - 2016-12-22
 
 ### Fixed

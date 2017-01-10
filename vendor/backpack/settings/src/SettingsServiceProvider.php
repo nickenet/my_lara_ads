@@ -37,9 +37,14 @@ class SettingsServiceProvider extends ServiceProvider
             }
         }
 
+        $this->loadTranslationsFrom(realpath(__DIR__.'/resources/lang'), 'backpack');
+
         // publish the migrations and seeds
         $this->publishes([__DIR__.'/database/migrations/' => database_path('migrations')], 'migrations');
         $this->publishes([__DIR__.'/database/seeds/' => database_path('seeds')], 'seeds');
+
+        // publish translation files
+        $this->publishes([__DIR__.'/resources/lang' => resource_path('lang/vendor/backpack')], 'lang');
     }
 
     /**

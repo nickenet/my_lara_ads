@@ -2,8 +2,6 @@
 
 namespace Backpack\BackupManager\app\Http\Controllers;
 
-namespace Backpack\BackupManager\app\Http\Controllers;
-
 use App\Http\Controllers\Controller;
 use Artisan;
 use Log;

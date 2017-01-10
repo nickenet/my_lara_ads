@@ -24,13 +24,6 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     /**
-     * Where to redirect users after login / registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = 'admin/dashboard';
-
-    /**
      * Create a new controller instance.
      *
      * @return void
@@ -39,7 +32,9 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
 
-        $this->redirectTo = config('backpack.base.route_prefix', 'admin').'/dashboard';
+        // Where to redirect users after login / registration.
+        $this->redirectTo = property_exists($this, 'redirectTo') ? $this->redirectTo
+            : config('backpack.base.route_prefix', 'dashboard');
     }
 
     /**
@@ -51,9 +46,13 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $user_model_fqn = config('backpack.base.user_model_fqn');
+        $user = new $user_model_fqn();
+        $users_table = $user->getTable();
+
         return Validator::make($data, [
             'name'     => 'required|max:255',
-            'email'    => 'required|email|max:255|unique:users',
+            'email'    => 'required|email|max:255|unique:'.$users_table,
             'password' => 'required|min:6|confirmed',
         ]);
     }
