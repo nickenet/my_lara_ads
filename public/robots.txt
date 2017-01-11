@@ -1,9 +1,7 @@
 User-agent: *
-Disallow:
-
-Allow: /
-
-User-agent: *
+Disallow: 
+Crawl-delay: 120
 Disallow: /admin/
 Disallow: /ajax/
 Disallow: /js/
+Sitemap: http://www.callboard.com.ua/uk/ua/sitemaps.xml
