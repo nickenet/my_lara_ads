@@ -99,7 +99,7 @@
 	<script src="{{ url('/assets/js/pace.min.js') }}"></script>
 </head>
 <body>
-
+    <h1></h1>
 <div id="wrapper">
 
 	@section('header')

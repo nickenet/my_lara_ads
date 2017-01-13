@@ -39,7 +39,7 @@ $defaultLang = \App\Larapen\Models\Language::where('default', 1)->first();
 							@if (isset($country) and !$country->isEmpty())
 								@if (file_exists(public_path() . '/images/flags/iso/32/'.strtolower($country->get('code')).'.png'))
 									<span><img src="{{ url('images/flags/iso/32/'.strtolower($country->get('code')).'.png') }}"
-											   style="float: left; margin: 6px 0 0 5px;" data-no-retina/> </span>
+											   style="float: left; margin: 6px 0 0 5px;" data-no-retina alt="flag"/> </span>
 								@endif
 							@endif
 						@endif
