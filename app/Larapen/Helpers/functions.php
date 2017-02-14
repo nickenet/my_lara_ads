@@ -578,36 +578,45 @@ function check_tld($url)
  * @param $page_id
  * @return int
  */
-function countFacebookFans($page_id)
-{
-    $count = 0;
-    if (config('settings.facebook_page_fans')) {
-        $count = (int) config('settings.facebook_page_fans');
-    } else {
-        $jsonUrl = 'http://api.facebook.com/method/fql.query?format=json&query=select+fan_count+from+page+where+page_id%3D' . $page_id;
-        try {
-            // Get content
-            $json = file_get_contents($jsonUrl);
-            $obj = json_decode($json);
-
-            /*
-             * Extract the likes count from the JSON object
-             * NOTE: Limit the number of requests:
-             * https://developers.facebook.com/docs/marketing-api/api-rate-limiting
-             */
-            if (!isset($obj->error_code) and isset($obj[0])) {
-                if (isset($obj[0]->fan_count) and is_numeric($obj[0]->fan_count)) {
-                    $count = $obj[0]->fan_count;
-                }
-            }
-        } catch (\Exception $e) {
-            $count = (int) config('settings.facebook_page_fans');
-        }
+//function countFacebookFans($page_id)
+//{
+//    $count = 0;
+//    if (config('settings.facebook_page_fans')) {
+//        $count = (int) config('settings.facebook_page_fans');
+//    } else {
+//        $jsonUrl = 'http://api.facebook.com/method/fql.query?format=json&query=select+fan_count+from+page+where+page_id%3D' . $page_id;
+//        try {
+//            // Get content
+//            $json = file_get_contents($jsonUrl);
+//            $obj = json_decode($json);
+//
+//            /*
+//             * Extract the likes count from the JSON object
+//             * NOTE: Limit the number of requests:
+//             * https://developers.facebook.com/docs/marketing-api/api-rate-limiting
+//             */
+//            if (!isset($obj->error_code) and isset($obj[0])) {
+//                if (isset($obj[0]->fan_count) and is_numeric($obj[0]->fan_count)) {
+//                    $count = $obj[0]->fan_count;
+//                }
+//            }
+//        } catch (\Exception $e) {
+//            $count = (int) config('settings.facebook_page_fans');
+//        }
+//    }
+//
+//    return $count;
+//  fb_fans_count($fbid,$app_id,$app_secret)   
+//}
+function countFacebookFans($fbid,$app_id,$app_secret){
+    $urls = 'https://graph.facebook.com/v2.8/'. $fbid . '?fields=fan_count&access_token='. $app_id . '|' . $app_secret;
+    $string = @file_get_contents( $urls );
+    if($string) {
+        $fan_count = json_decode( $string );
+        $get_fan_count = $fan_count->fan_count;
+        return $get_fan_count;
     }
-
-    return $count;
 }
-
 /**
  * Function to convert hex value to rgb array
  * @param $colour

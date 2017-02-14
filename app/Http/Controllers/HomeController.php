@@ -68,7 +68,7 @@ class HomeController extends FrontController
             // Count users
             $data['count_users'] = User::where('active', 1)->count();
             // Count Facebook fans
-            $data['count_facebook_fans'] = countFacebookFans(config('settings.facebook_page_id'));
+            $data['count_facebook_fans'] = countFacebookFans(config('settings.facebook_page_fans'),config('settings.facebook_client_id'),config('settings.facebook_client_secret'));
         }
         
         
