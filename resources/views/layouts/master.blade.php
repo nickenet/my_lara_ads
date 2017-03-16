@@ -27,9 +27,9 @@
 	@endif
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="apple-mobile-web-app-title" content="{{ config('settings.app_name') }}">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url('/assets/ico/apple-touch-icon-144-precomposed.png') }}">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url('/assets/ico/apple-touch-icon-114-precomposed.png') }}">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url('/assets/ico/apple-touch-icon-72-precomposed.png') }}">
+	<link rel="icon" sizes="144x144" href="{{ url('/assets/ico/apple-touch-icon-144-precomposed.png') }}">
+	<link rel="icon" sizes="114x114" href="{{ url('/assets/ico/apple-touch-icon-114-precomposed.png') }}">
+	<link rel="icon" sizes="72x72" href="{{ url('/assets/ico/apple-touch-icon-72-precomposed.png') }}">
 	<link rel="apple-touch-icon-precomposed" href="{{ url('/assets/ico/apple-touch-icon-57-precomposed.png') }}">
 	<link rel="shortcut icon" href="{{ url('/assets/ico/favicon.png') }}">
 	<title>{{ MetaTag::get('title') }}</title>
