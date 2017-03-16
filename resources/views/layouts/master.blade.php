@@ -61,7 +61,7 @@
 	@endif
 	<link href="{{ url('/assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ url('/assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
-	<link href="{{ url('/assets/css/style.css') . '?v=' . time() }}" rel="stylesheet">
+	<link href="{{ url('/assets/css/style.min.css') . '?v=' . time() }}" rel="stylesheet">
 	<link href="{{ url('/assets/css/style/default.min.css') . '?v=' . time() }}" rel="stylesheet">
 	@if (config('app.theme'))
 		<link href="{{ url('/assets/css/style/' . config('app.theme') . '.css') . '?v=' . time() }}" rel="stylesheet">
