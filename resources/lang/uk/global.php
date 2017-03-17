@@ -17,7 +17,7 @@ return [
     'Daily good deals in :location' => 'Щодня найкращі пропозиції в :location',
     'Looking for a product or service' => 'Пошук товару чи послуги',
     'Post your Free Ads here' => 'Додати оголошення тут',
-    'Make your deal Now!' => 'Зараз саме той виподак, щоб продавати більше!',
+    'Make your deal Now!' => 'Зараз саме час, продавати більше!',
     'Free Ads' => 'Безкоштовні оголошення',
     'Free ads' => 'Оголошень в базі',
     'Free ads in' => 'Безкоштовні оголошення в',
