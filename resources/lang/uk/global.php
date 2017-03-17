@@ -23,7 +23,7 @@ return [
     'Free ads in' => 'Безкоштовні оголошення в',
     'Free ads in :location' => 'Безкоштовні оголошення в :location',
     'Free ads in :category' => 'Безкоштовні оголошення в :category',
-    'Free ads :category in :location' => 'Безкоштовні оголошення :category in :location',
+    'Free ads :category in :location' => 'Безкоштовні оголошення :category в :location',
     'Search for' => 'Шукати',
     'free ads' => 'безкоштовні оголошення',
     'free ads in' => 'безкоштовні оголошення в',
