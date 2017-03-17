@@ -33,7 +33,7 @@ $defaultLang = \App\Larapen\Models\Language::where('default', 1)->first();
 					<a href="{{ lurl('/?d=' . $country->get('code')) }}" class="navbar-brand logo logo-title">
 						<img src="{{ url($logo) }}" data-at2x="{{ url($logo2x) }}" style="float: left; margin: 0 5px 0 0;"
 							 alt="{{ strtolower(config('settings.app_name')) }}" class="tooltipHere" title="" data-placement="bottom"
-							 data-toggle="tooltip" type="button"
+							 data-toggle="tooltip" 
 							 data-original-title="{{ config('settings.app_name') . ((isset($country) and $country->has('name')) ? ' ' . $country->get('name') : '') }}"/>
 						@if (config('settings.activation_country_flag'))
 							@if (isset($country) and !$country->isEmpty())
