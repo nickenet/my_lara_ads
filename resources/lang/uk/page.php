@@ -74,16 +74,34 @@ However, we realized that bad people use our site to upload fictitious ads and a
 
 <p><br />
 We recommend vigilance, although we make every effort to stop these acts. If you have a doubt about the quality of your contact, please send an email to our <a href=":contact_url">customer service</a>.</p>',
-    'Privacy' => 'Privacy',
-    'privacy_content' => '<p>Your privacy is an important part of our relationship with you. Protecting your privacy is only part of our mission to provide a secure web environment. When using our site, including our services, your information will remain strictly confidential. Contributions made on our blog or on our forum are open to public view; so please do not post any personal information in your dealings with others. We accept no liability for those actions because it is your sole responsibility to adequate and safe post content on our site. We will not share, rent or share your information with third parties.</p>
+    'Privacy' => 'Політика конфіденційності',
+    'privacy_content' => '<p><strong>CallBoardUA</strong> - сайт, який є майданчиком для розміщення безкоштовних оголошень. Це відкритий сервіс, який може використовувати будь-який користувач інтернету. За допомогою даної дошки оголошень кожен може знайти для себе щось або продати/віддати.</p>
+<p>Для того щоб додати оголошення на сайт, користувач повинен зареєструватися і надати деякі персональні дані. У зв\'язку з цим дошка безкоштовних оголошень в Україні <strong>«CallBoardUA»</strong> зобов\'язується захищати конфіденційність персональних даних клієнтів, які можуть бути ідентифіковані будь-яким чином, і які використовують даний ресурс.</p>
 
-<p>When you visit our site, we collect technical information about your computer and how you access our website and analyze this information such as Internet Protocol (IP) address of your computer, the operating system used by your computer, the browser (eg, Chrome, Firefox, Internet Explorer or other) your computer uses, the name of your Internet service provider (ISP), the Uniform Resource Locator (URL) of the website from which you come and the URL to which you go next and certain operating metrics such as the number of times you use our website. This general information can be used to help us better understand how our site is viewed and used. We may share this general information about our site with our business partners or the general public. For example, we may share the information on the number of daily unique visitors to our site with potential corporate partners or use them for advertising purposes. This information does contain any of your personal data that can be used to contact you or identify you.</p>
+<p><strong>Обробка персональних даних</strong></p>
 
-<p>When we place links or banners to other sites of our website, please note that we do not control this kind of content or practices or privacy policies of those sites. We do not endorse or assume no responsibility for the privacy policies or information collection practices of any other website other than managed sites :app_name.</p>
+<p>На даній сторінці ми зібрали всю необхідну інформацію і важливі відомості про політику конфіденційності сайту. Обробка всіх отриманих даних буде здійснюватися виключно відповідно до умов, які описані тут.</p>
 
-<p>We use the highest security standard available to protect your identifiable information in transit to us. All data stored on our servers are protected by a secure firewall for the unauthorized use or activity can not take place. Although we make every effort to protect your personal information against loss, misuse or alteration by third parties, you should be aware that there is always a risk that low-intentioned manage to find a way to thwart our security system or that Internet transmissions could be intercepted.</p>
+<p>Якщо вам необхідно , <a href="https://www.callboardua.local/create">додати оголошення</a>, ви обов\'язково повинні пройти <a href="https://www.callboardua.local/signup">реєстрацію</a>. В процесі реєстрації вам знадобиться ознайомитися з умовами співпраці. Як тільки ви ознайомитесь і погодитесь з ними (позначте відповідне поле в пункті «Я згоден»), відразу ж в дію вступає Політика конфіденційності нашого сайту.</p>
 
-<p>We reserve the right, without notice, to change, modify, add or remove portions of our Privacy Policy at any time and from time to time. These changes will be posted publicly on our website. When you visit our website, you accept all the terms of our privacy policy. Your continued use of this website constitutes your continued agreement to these terms. If you do not agree with the terms of our privacy policy, you should cease using our website.</p>',
+<p>Команда сайту <strong>«CallBoardUA»</strong> застосовує отриману особисту інформацію тільки для таких дій:</p>
+<ul class="list list-circle" style="padding: 10px 20px 10px 20px;">
+    <li>здійснення торгової угоди і/або надання послуги;</li>
+    <li>надання користувачу доступу до нашого сайту, його сервісів і для поліпшення якості сайту та сервісів;</li>
+    <li>надання вам інформації з метою поліпшити вашу роботу з сайтом, зробити її ефективнішою;</li>
+    <li>створення, управління і контролю вашого Облікового запису і для перевірки прав доступу;</li>
+    <li>спілкування з користувачем з метою інформування про зміни або доповнення до сервісів сайту, або про наявність будь-яких послуг, які ми надаємо;</li>
+    <li>оцінки рівня обслуговування, моніторингу трафіку і показника популярності різних варіантів обслуговування;</li>
+    <li>здійснення наших маркетингових заходів;</li>
+    <li>подачі претензії і відповіді на подані претензії;</li>
+    <li>захисту прав і законних інтересів вас, нас, наших користувачів і третіх осіб, відповідно до чинного законодавства.</li>
+</ul>
+
+<p>Наша дошка оголошень бере на себе зобов\'язання щодо захисту персональних даних наших користувачів. Ми гарантуємо, що ваші дані не потраплять в руки третіх осіб. Згідно з чинним законодавством наша команда залишає за собою право при необхідності надати дані відповідним службам, якщо це необхідно для захисту прав і свободи іншої людини. Дошка оголошень «CallBoard» залишає за собою право використовувати отримані персональні дані в електронній розсилці пропозицій і новин. Погоджуючись з умовами співпраці, ви автоматично даєте згоду на те, що наша команда може обробляти, уточнювати, використовувати, систематизувати, блокувати, знищувати, передавати і зберігати ваші дані у відповідність до чинного законодавства.</p>
+
+<p><strong>Гарантована безпека інформації</strong></p>
+
+<p>Наша команда зобов\'язується максимально захищати ваші персональні дані. Ми зробимо все для того, щоб ви могли бути спокійні. Однак варто розуміти, що будь-яка передача даних за допомогою інтернету або бездротових / мобільних пристроїв не може бути на 100% безпечна. Наша команда буде всіляко зміцнювати систему захисту.</p>',
     
     'How do I place an ad?' => 'How do I place an ad?',
     'How do I place an ad? - Content' => 'It\'s very easy to place an ad: click on the button "<strong>Post free Ads</strong>" above right.',
